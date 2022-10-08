@@ -11,7 +11,7 @@ class DoubleLinkedList(DoubleLinkedListAbstract):
         return self._size
 
     def __getitem__(self, key: int) -> Any:
-        if key < 0 and key >= self._size:
+        if key < 0 or key >= self._size:
             raise Exception("El indice esta fuera de rango")
 
         i = 0
@@ -24,7 +24,7 @@ class DoubleLinkedList(DoubleLinkedListAbstract):
             i += 1
 
     def __setitem__(self, key: int, value: Any) -> None:
-        if key < 0 and key >= self._size:
+        if key < 0 or key >= self._size:
             raise Exception("El indice esta fuera de rango")
 
         i = 0 
